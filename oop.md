@@ -36,6 +36,8 @@ En las subclases se pueden sobreescribir los métodos heredados y definir métod
 
 ### Clases Abstractas
 
+
+
 ## Polimorfismo (y sobrecarga)
 
 La capacidad de un objeto para tomar diferentes formas, dependiendo del contexto en el que se utilice.
@@ -63,7 +65,9 @@ En Python se puede simular ese comportamiento agregando dos guiones bajos al pri
 
 Presenta una visión simplificada de un objeto, enfocándose en sus características esenciales.
 
-## Acoplamiento y encapsulación
+## Encapsulación
+
+La encapsulación hace referencia al ocultamiento de los estado internos de una clase al exterior. Dicho de otra manera, encapsular consiste en hacer que los atributos o métodos internos a una clase no se puedan acceder ni modificar desde fuera, sino que tan solo el propio objeto pueda acceder a ellos.
 
 ## Interfaces (Clases abstractas)
 
@@ -71,8 +75,38 @@ Presenta una visión simplificada de un objeto, enfocándose en sus característ
 
 ## Diagrama de clases
 
+En el diagrama de clases se representan las clases y sus relaciones entre ellas. En este diagrama se representan la estructura y comportamiento de los objetos (sus atributos y métodos).
+
+Los elementos básicos son las **Clases** con sus **Atributos** y **Métodos**, y las **Relaciones** entre Clases.
+
+Una clase se representa como un rectángulo, separado en tres partes por líneas horizontales en las cuales se especifican su nombre, sus atributos y sus métodos (en ese orden).
+
+![Diagrama de Clases](img/clase.png)
+
+Delante de los atributos y métodos se representa su **visibilidad** que puede ser *privado* (+), *protegido* (#) o *público* (-).
+
+La visibilidad privada significa que los atributos y métodos solo pueden ser accedidos por la propia clase.
+
+La visibilidad protegida significa que los atributos y métodos pueden ser accedidos por la propia clase y por las clases derivadas.
+
+La visibilidad pública significa que los atributos y métodos pueden ser accedidos fuera de la propia clase.
+
+Python no posee un concepto de visibilidad pero se puede simular agregando dos guiones bajos al principio de los nombres de las clases y métodos que se quieren hacer privados (name mangling).
+
+### Relaciones
+
+Las relaciones se representan con una flecha cuyo trazo y punta varían según el tipo de relación.
+
+Los tipos de relaciones son los siguientes:
+
+- **Agregación**: Un objeto tiene otro objeto como parte de su estructura pero no comparten su ciclo de vida. Se representa con una línea sólida con punta de rombo sin pintar desde la clase agregada hasta la clase agregante.
+- **Composición**: Un objeto tiene otro objeto como parte de su estructura y comparten su ciclo de vida. Se representa con una línea sólida con punta de rombo pintada desde la clase agregada hasta la clase agregante.
+- **Herencia / Generalización**: Una clase hereda de otra. Se representa con una línea sólida con punta sin pintar desde la clase hija hasta la clase padre.
+
 ## Diagrama de casos de uso
 
 ## Diagrama de secuencia
+
+Modelan la interacción entre los objetos en un caso de uso, ilustrando el orden en que se ejecutan las interacciones.
 
 ## Diagrama de Máquina de Estados
